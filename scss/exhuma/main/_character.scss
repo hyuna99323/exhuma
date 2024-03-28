@@ -1,0 +1,64 @@
+// #character
+#character {
+  @include sectionBasic();
+  padding: 94px 70px 0;
+  background-color: $color_black;
+
+  h2 {
+    @include h2();
+    height: 32px;
+    color: #fff;
+  }
+  .swiper_wrapper {
+    display: flex;
+
+    .swiper_slide {
+      width: 23.78% !important;
+      height: auto;
+      background-color: #335D6A;
+      margin: 30px 10px 0;
+      padding: 26px 20px;
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: block;
+      
+      @at-root .character_img {
+        // width: 354px;
+        height: 300px;
+        margin: auto;
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      
+      @at-root .character_txt {
+        width: auto;
+        margin: 20px auto 0;
+        color: $color_white;
+        
+        p {
+          margin-bottom: 10px;
+          font-size: map-get($map: $font_size, $key: subtitle);
+          font-weight: $font_weight_bold;
+        }
+        span {
+          margin-top: 10px;
+          font-size: map-get($map: $font_size, $key: content1);
+        }
+      }
+    }
+  } // --- .swiper_slide
+
+  .swiper_slide:nth-child(1) {
+    margin-left: 0;
+  }
+  .swiper_slide:nth-child(4) {
+    margin-right: 0;
+  }
+} // --- #character

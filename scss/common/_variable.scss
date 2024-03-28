@@ -1,0 +1,59 @@
+// variable.scss
+
+// color =========================
+$color_green: #0A4B41;
+$color_blue: #1145A2;
+$color_skyblue: #B7CAE8;
+$color_baige: #D7DAC7;
+$color_puple: #4F4259;
+$color_red: #D71E15;
+$color_black: #000;
+$color_white: #fff;
+$color_whiteGraly: #eef;
+
+// ================================
+// border 
+$line1 : 1px solid $color_black;
+$line2 : 1px solid $color_white;
+
+// font ===========================
+$font-family_spotlight: 'Y_Spotlight';
+$font_family_score: 'S-CoreDream-3Light';
+$font_weight_regular: 300;
+$font_weight_medium: 500;
+$font_weight_bold: 600;
+$font_weight_bolder: 800;
+$font_weight: (400, 500, 600, 700, 800);
+
+$font_size_m:(
+  subtitle: 14px, pointcontent: 16px, projecttitle: 15px, subTxt: 10px,
+  projectsub: 18px, content1: 13px, endding: 30px, dialogue: 24px);
+
+$font_size_t:(
+  projecttitle: 20px, endding: 78px);
+
+$font_size:(
+  subtitle: 16px, pointcontent: 18px, projecttitle: 30px, subTxt: 12px,
+  projectsub: 20px, content1: 14px, endding: 96px, dialogue: 26px);
+
+$font_size_pcFull:(
+  subtitle: 20px, pointcontent: 22px, projecttitle: 34px, subTxt: 16px,
+  projectsub: 25px, content1: 18px, endding: 100px, dialogue: 32px);
+
+$letter-spacing: (
+  title: 0.7em, content: 0.3em, content_kr: 0.1em );
+  
+// device size ================================
+$mobile: 320px;
+$tablet: 768px;
+$laptop: 1024px;
+$pc: 1440px;
+$pcfull: 1920px;
+
+// width, height
+// $width100: 100%;
+// $auto: auto;
+// $displayflex: flex;
+// $box-sizing: border-box;
+
+

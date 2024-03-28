@@ -1,0 +1,140 @@
+// #gallery
+#gallery {
+  @include sectionBasic();
+  padding: 0;
+  padding-top: 94px;
+  background-color: $color_black;
+  
+  h2 {
+    @include h2();
+    position: absolute;
+    height: 37px;
+    color: $color_white;
+  }
+
+  .container {
+    width: 100%;
+    height: 88vh;
+    margin: auto;
+    display: grid;
+    align-content: center;
+
+    img {
+      display: block;
+      width: auto;
+      height: 60vh;
+      margin: auto;
+    }
+  }
+  .prev {
+    position: absolute;
+    left: 200px;
+    top: 54.4vh;
+    width: 0px;
+    height: 0px;
+    border-left: 0 solid transparent;
+    border-right: 15px solid #ffffff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  .next {
+    position: absolute;
+    right: 200px;
+    top: 54.4vh;
+    width: 0px;
+    height: 0px;
+    border-right: 0 solid transparent;
+    border-left: 15px solid #ffffff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  // @at-root .main_poster {
+  //   // margin-bottom: 80px;
+  //   height: 100vh;
+  //   align-content: center;
+
+  //   @include mobile() {
+  //     margin-bottom: 0;
+  //     height: 100%;
+  //   }
+
+  //   @include tablet() {
+  //     margin-bottom: 0;
+  //   }
+  // }
+
+  // #photo{
+  //   display: block;
+  //   width: 394px;
+  //   height: 562px;
+  //   margin: auto;
+  //   margin-top: 50px;
+
+  //   @include mobile() {
+  //     height: 100%;
+  //   }
+
+  //   @include tablet() {
+  //     height: 100vh;
+  //   }
+  // }
+
+  // @at-root .mini_img { // 임시코드 자바스크립트 활용예정
+  //   display: flex;
+  //   width: auto;
+  //   height: auto;
+  //   gap: 26px;
+  //   bottom: 25.3808%;
+  //   position: relative;
+  //   text-align: center;
+  //   justify-content: center;
+
+  //   li {
+  //     display: inline-block;
+  //   }
+    
+  //   img {
+  //     display: block;
+  //     width: 84px;
+  //     height: 84px;
+  //     border: 2px solid $color_white;
+  //     cursor: pointer;
+
+  //     @include mobile() {
+  //       width: 32px;
+  //       height: 32px;
+  //     }
+
+  //     @include tablet() {
+  //       width: 64px;
+  //       height: 64px;
+  //     }
+
+  //     @include pcfull() {
+  //       width: 130px;
+  //       height: 130px;
+  //     }
+  //   }
+
+  //   @include mobile() {
+  //     gap: 8px;
+  //     bottom: 40px;
+  //   }
+
+  //   @include tablet() {
+  //     bottom: 105px;
+  //     gap: 20px;
+  //   }
+  // } // --- .mini_img
+
+  // @include mobile() {
+  //   height: 190px;
+  //   padding: 0;
+  // }
+
+  // @include tablet() {
+  //   padding: 0;
+  // }
+} // --- #gellery

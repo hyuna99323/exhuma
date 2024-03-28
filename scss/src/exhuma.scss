@@ -1,0 +1,36 @@
+// portfolio2.scss
+/* portfolio2.css */
+
+@import "../common/variable";
+@import "../common/mixin";
+
+/* fonts.css */
+@font-face {
+  font-family: 'GeneralKimJwajinOTF_Regular';
+  src: url('../../font/K7_General_OTF/GeneralKimJwajinOTF_Bold.otf');
+  src: url('../../font/K7_General_OTF/GeneralKimJwajinOTF_Regular.otf');
+}
+
+*::selection {
+  color: $color_red;
+}
+  /* 전체 레이아웃 설정 */
+  // 전체 레이아웃 설정
+
+  /* #wrap */
+  // #wrap
+#wrap {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background-color: $color_white;
+  font-family: 'GeneralKimJwajinOTF_Regular', 'GeneralKimJwajinOTF_Bold';
+  font-weight: 300;
+} // --- #wrap
+
+@import "../exhuma/base/headbox";
+
+@import "../exhuma/main/cover";
+@import "../exhuma/main/introduce";
+@import "../exhuma/main/character";
+@import "../exhuma/main/gallery";

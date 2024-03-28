@@ -1,0 +1,111 @@
+// @use "sass:math"; 
+
+
+@mixin font_set (){
+  font-family:$font_family_black,  $font_family_score;
+}
+
+// image
+
+
+// section 기본 틀
+@mixin sectionBasic () {
+  height: 100vh;
+  padding: 60px 100px;
+}
+
+// h2
+@mixin h2 () {
+  width: 100%;
+  font-size: map-get($map: $font_size, $key: projecttitle);
+  font-weight: $font_weight_bold;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include mobile() {
+    font-size: map-get($map: $font_size_m, $key: pointcontent);
+  }
+}
+
+// h3
+@mixin h3 () {
+  width: auto;
+  height: 24px;
+  font-size: map-get($map: $font_size, $key: subtitle);
+  font-weight: $font_weight_bold;
+  text-transform: uppercase;
+  line-height: 24px;
+}
+
+// kiki poster 이미지 크기
+@mixin kikiPoster() {
+  width: 186px;
+  height: 244px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include mobile() {
+    width: 100%;
+    height: auto;
+  }
+
+  @include tablet() {
+    width: 47.306%;
+    height: 28.125vmax;
+    margin: auto;
+  }
+
+  @include laptop() {
+    width: 46.5%;
+    height: 20.1567vmax;
+    margin: auto;
+  }
+
+  @include pcfull() {
+    width: 45.5%;
+    height: 43%;
+  }
+}
+
+// @media query --------------------------------------
+$mobile : 320px;
+$tablet : 680px;
+$laptop : 1280px;
+$pc:1440px;
+$pcfull : 1920px;
+
+
+
+@mixin mobile(){
+  @media all and (max-width: #{$tablet - 1}){
+    @content;
+  }
+}
+
+@mixin tablet(){
+  @media all and (min-width:$tablet) and (max-width:#{$laptop - 1}) {
+    @content; 
+  }
+}
+
+@mixin laptop(){
+  @media all and (min-width:$laptop) and (max-width:#{$pc - 1}) {
+    @content;
+  }
+}
+
+@mixin pc(){
+  @media all and (min-width:$pc) and (max-width:#{$pcfull - 1}) {
+    @content;
+  }
+}
+
+@mixin pcfull(){
+  @media all and (min-width:$pcfull) {
+    @content;
+  }
+}
+

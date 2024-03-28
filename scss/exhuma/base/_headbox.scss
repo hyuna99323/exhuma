@@ -1,0 +1,224 @@
+// #headBox
+#headBox {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  box-sizing: border-box;
+
+  @at-root .headinner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: fixed;
+    padding: 13px 100px;
+    z-index: 1000;
+
+    @at-root .menu_bar {
+      width: 70%;
+
+      @at-root .navbar_overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 998;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.1s ease;
+      }
+      
+      @at-root .gnb {
+        position: fixed;
+        top: 20px;
+        cursor: pointer;
+        color: $color_white;
+        
+        i {
+          font-size: 30px;
+          color: $color_white;
+
+          @include mobile() {
+            font-size: 24px;
+          }
+        }
+
+        @include mobile() {
+          top: auto;
+        }
+
+        @include tablet() {
+          top: auto;
+        }
+      } // --- .gnb
+      
+      @at-root .burger_back {
+        position: fixed;
+        top: 0.9rem;
+        left: 4.3rem;
+        cursor: pointer;
+        color: #fff;
+
+        i {
+          font-size: 28px;
+        }
+      }
+
+      @at-root .navbar_menu {
+        width: 100%;
+        height: 100%;
+        background-image: url(../../../img/exhuma_back.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+        padding: 100px 60px;
+        position: fixed;
+        background-color: $color_red;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transform: translateY(-100%);
+        z-index: 999;
+        transition: transform 0.3s ease;
+        
+        .main_move {
+          left: 70px;   
+          position: relative;
+          font-size: map-get($map: $font_size, $key: projectsub);
+          color: $color_white;
+          font-weight: $font_weight_medium;
+          text-decoration: none;
+        }
+
+        .main_move:hover {
+          color: $color_red;
+          font-weight: bold;
+        }
+
+        .menu_inner {
+          width: 100%;
+          display: flex;
+
+          .aside {
+            width: 50%;
+            height: 67.9vh;
+            color: #fff;
+            align-content: center;
+            position: relative;
+            left: 103px;
+
+            p {
+              width: 370px;
+              text-align: center;
+              font-size: 170px;
+              font-weight: bold;
+            }
+
+            span {
+              display: block;
+              width: 370px;
+              text-align: center;
+              font-size: 32px;
+            }
+          }
+          .menu {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            left: 50px;
+
+            a {
+              font-size: 40px;
+              color: $color_white;
+              line-height: 180px;
+            }
+            a:nth-child(1) {
+              width: 310px;
+              position: relative;
+              left: 180px;
+            }
+            a:nth-child(2) {
+              width: 350px;
+            }
+            a:nth-child(3) {
+              width: 222px;
+              position: relative;
+              left: 282px;
+            }
+            a:hover {
+              color: $color_red;
+            }
+          }
+        }
+        @include mobile() {
+          width: 100%;
+        }
+      }
+
+      @at-root .navbar_menu.active {
+        transform: translateX(0);
+      }
+
+      @at-root .navbar_overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      @include mobile() {
+        width: 19.334%;
+      }
+    }
+
+    @include mobile() {
+      height: 50px;
+      padding: 10px;
+    }
+
+    @include tablet() {
+      height: 60px;
+      padding: 13px 50px;
+    }
+  } // --- .headinner
+
+  @at-root .reservation {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    color: $color_white;
+    gap: 15px;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      align-content: center;
+      font-size: 14px;
+    }
+
+    .reservation_rink {
+      width: 68px;
+      height: 68px;
+      background-color: #335D6A;
+      border-radius: 50%;
+      align-content: center;
+      text-align: center;
+      box-shadow: 0 0 50px #335D6A, 0 0 50px #335D6A;
+    }
+
+    .reservation_rink:hover {
+      color: $color_red;
+      font-weight: bold;
+    }
+    
+
+    @include mobile() {
+      width: 19.334%;
+    }
+  } // --- .reservation_rink
+
+  @include mobile() {
+    height: auto;
+  }
+} // --- #headBox
