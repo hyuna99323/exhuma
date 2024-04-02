@@ -26,7 +26,7 @@
         z-index: 998;
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.1s ease;
+        transition: opacity 0.5s ease;
       }
       
       @at-root .gnb {
@@ -79,9 +79,9 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        transform: translateY(-100%);
+        transform: translateY(-200%);
         z-index: 999;
-        transition: transform 0.3s ease;
+        transition: transform 0.5s ease;
         
         .main_move {
           left: 70px;   
