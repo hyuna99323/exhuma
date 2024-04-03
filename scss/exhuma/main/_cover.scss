@@ -18,10 +18,40 @@
       p {
         font-weight: bold;
         font-size: 140px;
+
+        @include mobile() {
+          font-size: 80px;
+        }
+
+        @include laptop () {
+          font-size: 120px;
+        }
       }
 
       span {
         font-size: 24px;
+
+        @include mobile() {
+          font-size: 20px;
+        }
+
+        @include laptop() {
+          font-size: 22px;
+        }
       }
+
+      @include mobile() {
+        top: 73%;
+      }
+    }
+
+    @include mobile() {
+      background-size: 100% 100%;
+      background-position: 0px;
+    }
+    
+    @include tablet() {
+      background-size: 100% 156%;
+      background-position: 0px -112px;
     }
   } // --- #cover

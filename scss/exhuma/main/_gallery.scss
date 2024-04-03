@@ -24,6 +24,16 @@
       width: auto;
       height: 60vh;
       margin: auto;
+
+      @include mobile() {
+        display: block;
+        width: 200px;
+        height: fit-content;
+      }
+    }
+
+    @include mobile() {
+      height: -webkit-fill-available;
     }
   }
   .prev {
@@ -36,6 +46,21 @@
     border-right: 15px solid #ffffff;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
+
+    @include mobile() {
+      left: 20px;
+    }
+
+    @include tablet() {
+      left: 100px;
+    }
+
+    @include pcfull() {
+      border-left: 0 solid transparent;
+      border-right: 25px solid #ffffff;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+    }
   }
 
   .next {
@@ -48,93 +73,20 @@
     border-left: 15px solid #ffffff;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
+
+    @include mobile() {
+      right: 20px;
+    }
+
+    @include tablet() {
+      right: 100px;
+    }
+
+    @include pcfull() {
+      border-right: 0 solid transparent;
+      border-left: 25px solid #ffffff;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+    }
   }
-
-  // @at-root .main_poster {
-  //   // margin-bottom: 80px;
-  //   height: 100vh;
-  //   align-content: center;
-
-  //   @include mobile() {
-  //     margin-bottom: 0;
-  //     height: 100%;
-  //   }
-
-  //   @include tablet() {
-  //     margin-bottom: 0;
-  //   }
-  // }
-
-  // #photo{
-  //   display: block;
-  //   width: 394px;
-  //   height: 562px;
-  //   margin: auto;
-  //   margin-top: 50px;
-
-  //   @include mobile() {
-  //     height: 100%;
-  //   }
-
-  //   @include tablet() {
-  //     height: 100vh;
-  //   }
-  // }
-
-  // @at-root .mini_img { // 임시코드 자바스크립트 활용예정
-  //   display: flex;
-  //   width: auto;
-  //   height: auto;
-  //   gap: 26px;
-  //   bottom: 25.3808%;
-  //   position: relative;
-  //   text-align: center;
-  //   justify-content: center;
-
-  //   li {
-  //     display: inline-block;
-  //   }
-    
-  //   img {
-  //     display: block;
-  //     width: 84px;
-  //     height: 84px;
-  //     border: 2px solid $color_white;
-  //     cursor: pointer;
-
-  //     @include mobile() {
-  //       width: 32px;
-  //       height: 32px;
-  //     }
-
-  //     @include tablet() {
-  //       width: 64px;
-  //       height: 64px;
-  //     }
-
-  //     @include pcfull() {
-  //       width: 130px;
-  //       height: 130px;
-  //     }
-  //   }
-
-  //   @include mobile() {
-  //     gap: 8px;
-  //     bottom: 40px;
-  //   }
-
-  //   @include tablet() {
-  //     bottom: 105px;
-  //     gap: 20px;
-  //   }
-  // } // --- .mini_img
-
-  // @include mobile() {
-  //   height: 190px;
-  //   padding: 0;
-  // }
-
-  // @include tablet() {
-  //   padding: 0;
-  // }
 } // --- #gellery
