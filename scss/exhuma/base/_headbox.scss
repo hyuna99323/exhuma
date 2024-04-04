@@ -180,11 +180,13 @@
             a {
               font-size: 40px;
               color: $color_white;
+              height: 180px;
               line-height: 180px;
 
               @include mobile() {
                 width: auto;
                 height: 100px;
+                line-height: 100px;
                 position: static;
                 font-size: 24px;
                 text-align: center;
@@ -311,6 +313,7 @@
       background-color: #335D6A;
       border-radius: 50%;
       align-content: center;
+      line-height: 68px;
       text-align: center;
       box-shadow: 0 0 50px #335D6A, 0 0 50px #335D6A;
     }
