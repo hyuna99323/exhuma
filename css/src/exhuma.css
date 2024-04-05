@@ -130,6 +130,7 @@
   color: #fff;
   font-weight: 500;
   text-decoration: none;
+  position: fixed;
 }
 
 @media all and (max-width: 679px) {
@@ -236,7 +237,7 @@
 .navbar_menu .menu_inner .menu a {
   font-size: 40px;
   color: #fff;
-  height: 180px;
+  height: 22.843vh;
   line-height: 180px;
 }
 
