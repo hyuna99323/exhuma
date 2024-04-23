@@ -55,7 +55,7 @@
     @include mobile() {
       font-size: 14px;
       width: 66%;
-      height: auto;
+      height: -webkit-fill-available;
     }
 
     @include tablet() {
@@ -72,7 +72,7 @@
   }
 
   @include mobile() {
-    padding: 50px 40px 120px 40px;
+    padding: 35px 40px;
     height: 100vh;
     gap: 16px;
     background-size: 100% 100%;
