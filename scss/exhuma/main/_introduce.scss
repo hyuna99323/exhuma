@@ -55,7 +55,7 @@
     @include mobile() {
       font-size: 14px;
       width: 66%;
-      height: -webkit-fill-available;
+      // height: -webkit-fill-available;
     }
 
     @include tablet() {

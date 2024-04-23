@@ -588,7 +588,6 @@
   .intro_txt {
     font-size: 14px;
     width: 66%;
-    height: -webkit-fill-available;
   }
 }
 
